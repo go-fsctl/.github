@@ -17,6 +17,7 @@
 | [`btrfs`](https://github.com/go-fsctl/btrfs) | **btrfs** kernel control via the `BTRFS_IOC_*` ioctls — no CLI |
 | [`zfs`](https://github.com/go-fsctl/zfs) | **libzfs_core**-style ZFS kernel operations via `/dev/zfs` ioctls — no CLI |
 | [`loop`](https://github.com/go-fsctl/loop) | Linux **loop-device** control via `/dev/loop-control` + `LOOP_*` ioctls — no `losetup` |
+| [`blk`](https://github.com/go-fsctl/blk) | Generic **block-device** ioctls — `BLKGETSIZE64`, `BLKDISCARD`, `BLKZEROOUT`, `BLKPG` — size and I/O geometry, discard, and partitions without re-reading the table |
 | [`cowclone`](https://github.com/go-fsctl/cowclone) | **Copy-on-write file cloning** — APFS `clonefile(2)` + Linux `FICLONE` reflink, with a transparent byte-copy fallback |
 
 Every repo is pure Go (`CGO_ENABLED=0`) and BSD-3-Clause.
