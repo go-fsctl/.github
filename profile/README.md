@@ -19,5 +19,6 @@
 | [`loop`](https://github.com/go-fsctl/loop) | Linux **loop-device** control via `/dev/loop-control` + `LOOP_*` ioctls — no `losetup` |
 | [`blk`](https://github.com/go-fsctl/blk) | Generic **block-device** ioctls — `BLKGETSIZE64`, `BLKDISCARD`, `BLKZEROOUT`, `BLKPG` — size and I/O geometry, discard, and partitions without re-reading the table |
 | [`cowclone`](https://github.com/go-fsctl/cowclone) | **Copy-on-write file cloning** — APFS `clonefile(2)` + Linux `FICLONE` reflink, with a transparent byte-copy fallback |
+| [`projquota`](https://github.com/go-fsctl/projquota) | XFS and ext4 **project quotas** — a directory tree's project id via `FS_IOC_FSSETXATTR`, its limits and usage via `quotactl_fd(2)` — no `xfs_quota`, `setquota` or `chattr` |
 
 Every repo is pure Go (`CGO_ENABLED=0`) and BSD-3-Clause.
